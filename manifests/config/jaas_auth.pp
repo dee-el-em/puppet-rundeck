@@ -16,7 +16,9 @@ class rundeck::config::jaas_auth {
     }
   } else {
     file { "${rundeck::config::properties_dir}/realm.properties":
-      ensure => absent,
+      ensure  => file,
+      content => '',
+      mode    => '0400',
     }
   }
 
