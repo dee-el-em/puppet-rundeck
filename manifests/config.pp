@@ -41,7 +41,7 @@ class rundeck::config {
   }
 
   $framework_config.each |$_key, $_value| {
-    if $_key =~ '.dir' {
+    if $_key =~ '\.dir' {
       file { $_value:
         ensure => directory,
         mode   => '0755',
