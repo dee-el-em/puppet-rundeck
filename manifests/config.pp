@@ -92,7 +92,7 @@ class rundeck::config {
   file { "${properties_dir}/project.properties":
     ensure  => file,
     content => '',
-    mode    => '0400',
+    mode    => '0640',
   }
 
   file { "${properties_dir}/rundeck-config.properties":

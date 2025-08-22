@@ -18,7 +18,7 @@ class rundeck::config::jaas_auth {
     file { "${rundeck::config::properties_dir}/realm.properties":
       ensure  => file,
       content => '',
-      mode    => '0400',
+      mode    => '0640',
     }
   }
 
