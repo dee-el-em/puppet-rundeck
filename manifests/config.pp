@@ -90,7 +90,9 @@ class rundeck::config {
   contain rundeck::config::framework
 
   file { "${properties_dir}/project.properties":
-    ensure => absent,
+      ensure  => file,
+      content => '',
+      mode    => '0400',
   }
 
   file { "${properties_dir}/rundeck-config.properties":
